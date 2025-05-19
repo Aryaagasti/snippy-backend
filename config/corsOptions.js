@@ -2,7 +2,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const corsOptions = {
-  origin: '*', // Allow all origins during development
+  origin: process.env.FRONTEND_URL || 'https://snippy-pi.vercel.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
